@@ -19,8 +19,19 @@ void tieBreaker() {
     IntakeMotor.move(-127);
 }
 
+/*Four rollers and expansion*/
 void skills() {
-    IntakeMotor.move(127);
+    // First two rollers?
+    chassis::move(1, {REVERSE, ASYNC});
+    RollerMotor.move(127);
+    chassis::move(1);
+    RollerMotor.move(0); 
+    chassis::move(24);
+    chassis::turn(90, RELATIVE);
+    chassis::move(25, ASYNC);
+    RollerMotor.move(127);
+    chassis::move(1);
+    RollerMotor.move(0);
 }
 
 /**
